@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "y",
+    "x",
+    "x"
+  ],
+  "key": {
+    "x": [
+      {
+        "item": "minecraft:stick",
+        "data": 0
+      }
+    ],
+    "y": [
+      {
+        "item": "rhodonite:item_rhodonite_ingot",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "rhodonite:item_tool_rhodonite_shovel",
+    "data": 0
+  }
+}

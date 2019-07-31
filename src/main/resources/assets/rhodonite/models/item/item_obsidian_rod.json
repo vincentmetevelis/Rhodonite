@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "rhodonite:item/item_obsidian_rod"
+  }
+}

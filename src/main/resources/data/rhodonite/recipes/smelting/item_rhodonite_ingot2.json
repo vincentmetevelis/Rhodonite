@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "rhodonite:item_rhodonite_dust"
+  },
+  "result": "rhodonite:item_rhodonite_ingot",
+  "experience": 0.35,
+  "cookingTime": 200
+}

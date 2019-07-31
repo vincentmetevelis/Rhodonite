@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "rhodonite:item_rhodonite_nugget"
+    }
+  },
+  "result": {
+    "item": "rhodonite:item_rhodonite_ingot",
+    "count": 1
+  }
+}

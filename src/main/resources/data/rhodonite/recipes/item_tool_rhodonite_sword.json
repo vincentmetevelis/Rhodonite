@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " y",
+    "xy"
+  ],
+  "key": {
+    "x": [
+      {
+        "item": "rhodonite:item_tool_rhodonite_sword_noodle",
+        "data": 0
+      }
+    ],
+    "y": [
+      {
+        "item": "rhodonite:item_rhodonite_sharpening_kit",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "rhodonite:item_tool_rhodonite_sword",
+    "data": 0
+  }
+}
