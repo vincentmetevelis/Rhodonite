@@ -19,7 +19,7 @@ public class Rhodonite {
     public static final ItemGroup tab = new ItemGroup("tab_rhodonite") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(Objects.Items.itemRhodoniteDust);
+            return new ItemStack(Objects.Items.Tools.itemToolRhodoniteSword);
         }
     };
 
