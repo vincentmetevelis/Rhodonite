@@ -100,5 +100,3 @@ public class CustomOreFeature extends OreFeature {
         return i > 0;
     }
 }
-
-
