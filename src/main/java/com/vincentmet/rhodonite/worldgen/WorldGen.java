@@ -1,6 +1,5 @@
 package com.vincentmet.rhodonite.worldgen;
 
-
 import com.vincentmet.rhodonite.Objects;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
