@@ -8,7 +8,6 @@ import com.vincentmet.rhodonite.worldgen.WorldGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -29,7 +28,6 @@ public class Rhodonite {
     public Rhodonite(){
         INSTANCE = this;
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        FluidRegistry.enableUniversalBucket();
         MinecraftForge.EVENT_BUS.register(this);
     }
 
