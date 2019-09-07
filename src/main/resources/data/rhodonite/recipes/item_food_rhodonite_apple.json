@@ -33,6 +33,7 @@
   },
   "result": {
     "item": "rhodonite:item_food_rhodonite_apple",
-    "data": 0
+    "data": 0,
+	"count": 1
   }
 }

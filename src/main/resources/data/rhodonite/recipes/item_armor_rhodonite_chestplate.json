@@ -21,6 +21,7 @@
   },
   "result": {
     "item": "rhodonite:item_armor_rhodonite_chestplate",
-    "data": 0
+    "data": 0,
+	"count": 1
   }
 }

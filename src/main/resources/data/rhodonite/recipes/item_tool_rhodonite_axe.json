@@ -21,6 +21,7 @@
   },
   "result": {
     "item": "rhodonite:item_tool_rhodonite_axe",
-    "data": 0
+    "data": 0,
+	"count": 1
   }
 }
