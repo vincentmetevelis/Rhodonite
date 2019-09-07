@@ -8,25 +8,23 @@
   "key": {
     "x": [
       {
-        "item": "rhodonite:item_rhodonite_sword_blade",
-        "data": 0
+        "item": "rhodonite:item_rhodonite_sword_blade"
       }
     ],
     "y": [
       {
-        "item": "rhodonite:item_rhodonite_crystal_infused",
-        "data": 0
+        "item": "rhodonite:item_rhodonite_crystal_infused"
+        
       }
     ],
     "z": [
       {
-        "item": "rhodonite:item_rhodonite_sword_handle",
-        "data": 0
+        "item": "rhodonite:item_rhodonite_sword_handle"
       }
     ]
   },
   "result": {
     "item": "rhodonite:item_tool_rhodonite_sword_noodle",
-    "data": 0
+    "count": 1
   }
 }

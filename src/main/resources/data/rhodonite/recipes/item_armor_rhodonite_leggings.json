@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "xyx",
     "x x",
-    "y y"
+    "x x"
   ],
   "key": {
     "x": [
@@ -12,12 +13,12 @@
     ],
     "y": [
       {
-        "item": "rhodonite:block_rhodonite"
+        "item": "rhodonite:item_rhodonite_crystal_infused"
       }
     ]
   },
   "result": {
-    "item": "rhodonite:item_armor_rhodonite_boots",
+    "item": "rhodonite:item_armor_rhodonite_leggings",
     "count": 1
   }
 }
