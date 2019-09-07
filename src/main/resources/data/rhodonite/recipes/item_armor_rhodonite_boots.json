@@ -7,20 +7,17 @@
   "key": {
     "x": [
       {
-        "item": "rhodonite:item_rhodonite_ingot",
-        "data": 0
+        "item": "rhodonite:item_rhodonite_ingot"
       }
     ],
     "y": [
       {
-        "item": "rhodonite:block_rhodonite",
-        "data": 0
+        "item": "rhodonite:block_rhodonite"
       }
     ]
   },
   "result": {
     "item": "rhodonite:item_armor_rhodonite_boots",
-    "data": 0,
-	"count": 1
+    "count": 1
   }
 }

@@ -8,20 +8,17 @@
   "key": {
     "x": [
       {
-        "item": "rhodonite:item_rhodonite_ingot",
-        "data": 0
+        "item": "rhodonite:item_rhodonite_ingot"
       }
     ],
     "y": [
       {
-        "item": "rhodonite:item_rhodonite_crystal_infused",
-        "data": 0
+        "item": "rhodonite:item_rhodonite_crystal_infused"
       }
     ]
   },
   "result": {
     "item": "rhodonite:item_armor_rhodonite_chestplate",
-    "data": 0,
 	"count": 1
   }
 }

@@ -8,20 +8,17 @@
   "key": {
     "x": [
       {
-        "item": "minecraft:stick",
-        "data": 0
+        "item": "minecraft:stick"
       }
     ],
     "y": [
       {
-        "item": "rhodonite:item_rhodonite_ingot",
-        "data": 0
+        "item": "rhodonite:item_rhodonite_ingot"
       }
     ]
   },
   "result": {
     "item": "rhodonite:item_tool_rhodonite_shovel",
-    "data": 0,
-	"count": 1
+    "count": 1
   }
 }

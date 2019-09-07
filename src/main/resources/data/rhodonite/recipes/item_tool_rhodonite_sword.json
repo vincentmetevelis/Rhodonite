@@ -7,20 +7,17 @@
   "key": {
     "x": [
       {
-        "item": "rhodonite:item_tool_rhodonite_sword_noodle",
-        "data": 0
+        "item": "rhodonite:item_tool_rhodonite_sword_noodle"
       }
     ],
     "y": [
       {
-        "item": "rhodonite:item_rhodonite_sharpening_kit",
-        "data": 0
+        "item": "rhodonite:item_rhodonite_sharpening_kit"
       }
     ]
   },
   "result": {
     "item": "rhodonite:item_tool_rhodonite_sword",
-    "data": 0,
-	"count": 1
+    "count": 1
   }
 }
