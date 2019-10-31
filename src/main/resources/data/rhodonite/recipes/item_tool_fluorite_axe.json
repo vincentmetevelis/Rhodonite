@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "yy",
+    "xy",
+    "x "
+  ],
+  "key": {
+    "x": [
+      {
+        "item": "minecraft:stick"
+      }
+    ],
+    "y": [
+      {
+        "item": "rhodonite:item_fluorite_crystal"
+      }
+    ]
+  },
+  "result": {
+    "item": "rhodonite:item_tool_fluorite_axe",
+    "count": 1
+  }
+}

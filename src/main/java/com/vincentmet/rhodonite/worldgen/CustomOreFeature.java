@@ -1,6 +1,7 @@
 package com.vincentmet.rhodonite.worldgen;
 
 import com.mojang.datafixers.Dynamic;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -13,8 +14,10 @@ import java.util.Random;
 import java.util.function.Function;
 
 public class CustomOreFeature extends OreFeature {
-    public CustomOreFeature(Function<Dynamic<?>, ? extends OreFeatureConfig> p_i51472_1_) {
+    private Block replacedBlock;
+    public CustomOreFeature(Function<Dynamic<?>, ? extends OreFeatureConfig> p_i51472_1_, Block replacedBlock) {
         super(p_i51472_1_);
+        this.replacedBlock = replacedBlock;
     }
 
     @Override
@@ -84,7 +87,7 @@ public class CustomOreFeature extends OreFeature {
                                             bitset.set(k2);
                                             blockpos$mutableblockpos.setPos(l1, i2, j2);
 
-                                            if (worldIn.getBlockState(blockpos$mutableblockpos).getBlock() == Blocks.END_STONE) {
+                                            if (worldIn.getBlockState(blockpos$mutableblockpos).getBlock() == replacedBlock) {
                                                 worldIn.setBlockState(blockpos$mutableblockpos, config.state, 2);
                                                 ++i;
                                             }

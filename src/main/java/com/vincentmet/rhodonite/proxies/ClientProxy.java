@@ -8,8 +8,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 public class ClientProxy implements IProxy {
     @Override
     public void setup(FMLCommonSetupEvent event) {
-        /*File directory = event.getModConfigurationDirectory();
-        cfg = new Configuration(new File(directory.getPath(), "Rhodonite.cfg"));
-        ConfigHandler.readCfg();*/
+
     }
 }

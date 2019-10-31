@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "zyz",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "x": [
+      {
+        "item": "minecraft:stick"
+      }
+    ],
+    "y": [
+      {
+        "item": "rhodonite:block_fluorite"
+      }
+    ],
+    "z": [
+      {
+        "item": "rhodonite:item_fluorite_crystal"
+      }
+    ]
+  },
+  "result": {
+    "item": "rhodonite:item_tool_fluorite_pickaxe",
+    "count": 1
+  }
+}
