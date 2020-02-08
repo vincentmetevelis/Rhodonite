@@ -15,12 +15,12 @@ repositories {
     maven { url = 'https://dvs1.progwml6.com/files/maven/' }
     maven { url = 'https://modmaven.k-4u.nl' }
 }
-version = '1.14.4-1.1'
+version = '1.15.2-1.0.0'
 group = 'com.vincentmet.rhodonite'
 archivesBaseName = 'rhodonite'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 minecraft {
-    mappings channel: 'snapshot', version: '20200119-1.14.4'
+    mappings channel: 'snapshot', version: '20200208-1.15.1'
     runs {
         client {
             workingDirectory project.file('run')
@@ -40,7 +40,7 @@ minecraft {
         }
         data {
             workingDirectory project.file('run')
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'rhodonite', '--all', '--output', file('src/generated/resources/')
             mods {
                 rhodonite {
                     source sourceSets.main
@@ -50,7 +50,7 @@ minecraft {
     }
 }
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.14.4-28.1.117'
+    minecraft 'net.minecraftforge:forge:1.15.2-31.1.1'
 
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
