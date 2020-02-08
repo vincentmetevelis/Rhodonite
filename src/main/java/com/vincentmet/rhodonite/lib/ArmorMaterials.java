@@ -4,7 +4,6 @@ import com.vincentmet.rhodonite.Objects;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyLoadBase;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -22,7 +21,7 @@ public enum ArmorMaterials implements IArmorMaterial {
     private final int enchantability;
     private final SoundEvent soundEvent;
     private final float toughness;
-    private final LazyLoadBase<Ingredient> repairMaterial;
+    private final Ingredient repairMaterial;
 
     ArmorMaterials(ResourceLocation name, int maxDamageFactor, int[] damageReductionAmount, int enchantability, SoundEvent sound, float toughness, Supplier<Ingredient> repairMaterial){
         this.name = name;
@@ -31,7 +30,7 @@ public enum ArmorMaterials implements IArmorMaterial {
         this.enchantability = enchantability;
         this.soundEvent = sound;
         this.toughness = toughness;
-        this.repairMaterial = new LazyLoadBase<>(repairMaterial);
+        this.repairMaterial = repairMaterial.get();
     }
 
     @Override
@@ -56,7 +55,7 @@ public enum ArmorMaterials implements IArmorMaterial {
 
     @Override
     public Ingredient getRepairMaterial() {
-        return repairMaterial.getValue();
+        return repairMaterial;
     }
 
     @Override

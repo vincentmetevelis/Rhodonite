@@ -3,7 +3,6 @@ package com.vincentmet.rhodonite.lib;
 import com.vincentmet.rhodonite.Objects;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyLoadBase;
 
 import java.util.function.Supplier;
 
@@ -17,7 +16,7 @@ public enum ToolMaterials implements IItemTier {
     private final float efficiency;
     private final float attackDamage;
     private final int enchantability;
-    private final LazyLoadBase<Ingredient> repairMaterial;
+    private final Ingredient repairMaterial;
 
     ToolMaterials(int harvestLevelIn, int maxUsesIn, float efficiencyIn, float attackDamageIn, int enchantabilityIn, Supplier<Ingredient> repairMaterialIn) {
         this.harvestLevel = harvestLevelIn;
@@ -25,7 +24,7 @@ public enum ToolMaterials implements IItemTier {
         this.efficiency = efficiencyIn;
         this.attackDamage = attackDamageIn;
         this.enchantability = enchantabilityIn;
-        this.repairMaterial = new LazyLoadBase<>(repairMaterialIn);
+        this.repairMaterial = repairMaterialIn.get();
     }
 
     @Override
@@ -55,6 +54,6 @@ public enum ToolMaterials implements IItemTier {
 
     @Override
     public Ingredient getRepairMaterial() {
-        return this.repairMaterial.getValue();
+        return this.repairMaterial;
     }
 }

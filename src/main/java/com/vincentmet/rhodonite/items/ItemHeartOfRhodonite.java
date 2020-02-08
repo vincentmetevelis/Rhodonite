@@ -22,9 +22,9 @@ public class ItemHeartOfRhodonite extends DefaultItem {
         if(Config.HEART_CRAFTING_EXPLOSION.get()){
             if(new Random().nextInt(100) <= Config.HEART_CRAFTING_EXPLOSION_CHANCE.get()){
                 float var4 = 1.0F;
-                int i = (int) (entity.prevPosX + (entity.posX - entity.prevPosX) * var4);
-                int j = (int) (entity.prevPosY + (entity.posY - entity.prevPosY) * var4 + 1.62D);
-                int k = (int) (entity.prevPosZ + (entity.posZ - entity.prevPosZ) * var4);
+                int i = (int) (entity.prevPosX + (entity.getPosX() - entity.prevPosX) * var4);
+                int j = (int) (entity.prevPosY + (entity.getPosY() - entity.prevPosY) * var4 + 1.62D);
+                int k = (int) (entity.prevPosZ + (entity.getPosZ() - entity.prevPosZ) * var4);
 
                 if(Config.HEART_CRAFTING_BLOCKDAMAGE.get()){
                     Explosion explosion = new Explosion(world, entity, i, j, k, Config.HEART_CRAFTING_EXPLOSION_STRENGTH.get().floatValue(), false, Explosion.Mode.BREAK);
