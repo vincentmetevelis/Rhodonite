@@ -8,9 +8,9 @@ import net.minecraft.util.LazyLoadBase;
 import java.util.function.Supplier;
 
 public enum ToolMaterials implements IItemTier {
-    RHODONITE(3, 9876, 15, 9, 30, ()->{return Ingredient.fromItems(Objects.Items.itemRhodoniteIngot);}),
-    RHODONITE_NOODLE(1, 42, 1, 1, 5, ()->{return Ingredient.fromItems(Objects.Items.itemRhodoniteIngot);}),
-    FLUORITE(2, 1337, 7, 5, 30, ()->{return Ingredient.fromItems(Objects.Items.itemFluoriteCrystal);});
+    RHODONITE(5, 9876, 50, 12, 30, ()->{return Ingredient.fromItems(Objects.Items.itemRhodoniteIngot);}),
+    RHODONITE_NOODLE(1, 42, 3, 1, 5, ()->{return Ingredient.fromItems(Objects.Items.itemRhodoniteIngot);}),
+    FLUORITE(4, 1337, 15, 5, 30, ()->{return Ingredient.fromItems(Objects.Items.itemFluoriteCrystal);});
 
     private final int harvestLevel;
     private final int maxUses;

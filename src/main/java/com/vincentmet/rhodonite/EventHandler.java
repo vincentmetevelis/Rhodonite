@@ -13,6 +13,7 @@ import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -67,13 +68,13 @@ public class EventHandler {
     }
 
     @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
+    public static void registerBlocks(RegistryEvent.Register<Block> event) {//fixme
         event.getRegistry().registerAll(
-                Objects.Blocks.blockRhodonite = new DefaultBlock(new ResourceLocation(Ref.MODID, "block_rhodonite"), Material.IRON),
-                Objects.Blocks.blockOreRhodonite = new RhodoniteOre(new ResourceLocation(Ref.MODID, "block_ore_rhodonite"), Material.ROCK),
+                Objects.Blocks.blockRhodonite = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(10F).harvestTool(ToolType.PICKAXE).harvestLevel(4)).setRegistryName(new ResourceLocation(Ref.MODID, "block_rhodonite")),
+                Objects.Blocks.blockOreRhodonite = new RhodoniteOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(10F).harvestTool(ToolType.PICKAXE).harvestLevel(4)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_rhodonite")),
 
-                Objects.Blocks.blockFluorite = new DefaultBlock(new ResourceLocation(Ref.MODID, "block_fluorite"), Material.IRON),
-                Objects.Blocks.blockOreFluorite = new DefaultBlock(new ResourceLocation(Ref.MODID, "block_ore_fluorite"), Material.ROCK)
+                Objects.Blocks.blockFluorite = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(10F).harvestTool(ToolType.PICKAXE).harvestLevel(3)).setRegistryName(new ResourceLocation(Ref.MODID, "block_fluorite")),
+                Objects.Blocks.blockOreFluorite = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(10F).harvestTool(ToolType.PICKAXE).harvestLevel(3)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_fluorite"))
         );
     }
 }

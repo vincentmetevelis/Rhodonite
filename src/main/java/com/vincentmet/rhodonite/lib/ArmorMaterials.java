@@ -12,10 +12,10 @@ import net.minecraft.util.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ArmorMaterials implements IArmorMaterial {
-    RHODONITE(new ResourceLocation(Ref.MODID, "material_armor_rhodonite"), 9, new int[]{4, 7, 8, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1F, ()->{return Ingredient.fromItems(Objects.Items.itemRhodoniteIngot);}),
-    FLUORITE(new ResourceLocation(Ref.MODID, "material_armor_fluorite"), 6, new int[]{3, 5, 6, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.8F, ()->{return Ingredient.fromItems(Objects.Items.itemFluoriteCrystal);});
+    RHODONITE(new ResourceLocation(Ref.MODID, "material_armor_rhodonite"), 1000, new int[]{8, 14, 20, 8}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 40F, ()->{return Ingredient.fromItems(Objects.Items.itemRhodoniteIngot);}),
+    FLUORITE(new ResourceLocation(Ref.MODID, "material_armor_fluorite"), 250, new int[]{4, 7, 10, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 20F, ()->{return Ingredient.fromItems(Objects.Items.itemFluoriteCrystal);});
 
-    private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
+    private static final int[] MAX_DAMAGE_ARRAY = new int[]{4, 7, 8, 5};
     private final ResourceLocation name;
     private final int maxDamageFactor;
     private final int[] damageReductionAmountArray;
