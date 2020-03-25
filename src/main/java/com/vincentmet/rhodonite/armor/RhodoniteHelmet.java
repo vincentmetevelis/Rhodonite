@@ -31,10 +31,10 @@ public class RhodoniteHelmet extends ArmorItem {
     @Override
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
         if(Config.RHODONITE_ARMOR_FLIGHT.get()){
-            ItemStack stackHead = player.inventory.armorItemInSlot(3);
-            ItemStack stackChest = player.inventory.armorItemInSlot(2);
-            ItemStack stackLegging = player.inventory.armorItemInSlot(1);
-            ItemStack stackBoots = player.inventory.armorItemInSlot(0);
+            ItemStack stackHead = player.getItemStackFromSlot(EquipmentSlotType.HEAD);
+            ItemStack stackChest = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
+            ItemStack stackLegging = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
+            ItemStack stackBoots = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 
             boolean isWearingFullSetOfRhodonite = stackHead != null && stackHead.getItem() instanceof RhodoniteHelmet && stackChest != null && stackChest.getItem() instanceof RhodoniteChestplate && stackLegging != null && stackLegging.getItem() instanceof RhodoniteLeggings && stackBoots != null && stackBoots.getItem() instanceof RhodoniteBoots;
             if(!player.getPersistentData().contains("wearingFullRhodoniteArmor"))player.getPersistentData().putBoolean("wearingFullRhodoniteArmor", false);
