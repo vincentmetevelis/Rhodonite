@@ -15,7 +15,7 @@ repositories {
     maven { url = 'https://dvs1.progwml6.com/files/maven/' }
     maven { url = 'https://modmaven.k-4u.nl' }
 }
-version = '1.15.2-1.0.0'
+version = '1.15.2-1.0.1'
 group = 'com.vincentmet.rhodonite'
 archivesBaseName = 'rhodonite'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'

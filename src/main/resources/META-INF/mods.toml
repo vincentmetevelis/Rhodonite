@@ -3,7 +3,7 @@ loaderVersion="[31,)" #mandatory
 credits="vincentmet" #optional
 [[mods]] #mandatory
 modId="rhodonite" #mandatory
-version="1.15.2-1.0.0" #mandatory
+version="1.15.2-1.0.1" #mandatory
 displayName="Rhodonite" #mandatory
 description='''
 Rhodonite!!!
