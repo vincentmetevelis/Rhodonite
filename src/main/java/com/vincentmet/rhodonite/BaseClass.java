@@ -1,14 +1,9 @@
 package com.vincentmet.rhodonite;
 
 import com.vincentmet.rhodonite.lib.Ref;
-import com.vincentmet.rhodonite.proxies.ClientProxy;
-import com.vincentmet.rhodonite.proxies.IProxy;
-import com.vincentmet.rhodonite.proxies.ServerProxy;
 import com.vincentmet.rhodonite.worldgen.WorldGen;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -25,11 +20,7 @@ public class BaseClass {
         }
     };
 
-    public static BaseClass INSTANCE;
-    public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
-
     public BaseClass(){
-        INSTANCE = this;
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.COMMON_CONFIG);
         Config.loadConfig(Config.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve(Ref.MODID + "-common.toml"));
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -39,6 +30,5 @@ public class BaseClass {
 
     private void setup(final FMLCommonSetupEvent event){
         WorldGen.addOresToBiome();
-        proxy.setup(event);
     }
 }

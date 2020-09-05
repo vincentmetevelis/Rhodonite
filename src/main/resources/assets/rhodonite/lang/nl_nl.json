@@ -1,0 +1,47 @@
+{
+  "itemGroup.tab_rhodonite": "Rhodonite",
+
+  "item.rhodonite.item_rhodonite_dust": "Rhodonite Stof",
+  "item.rhodonite.item_rhodonite_ingot": "Rhodonite Staaf",
+  "item.rhodonite.item_rhodonite_crystal": "Rhodonite Kristal",
+  "item.rhodonite.item_rhodonite_crystal_infused": "Geïnfuseerd Rhodonite Kristal",
+  "item.rhodonite.item_rhodonite_sword_handle": "Rhodonite Zwaard Handvat",
+  "item.rhodonite.item_rhodonite_sword_blade": "Rhodonite Zwaardblad",
+  "item.rhodonite.item_rhodonite_sharpening_kit": "Rhodonite Slijpsteen",
+  "item.rhodonite.item_rhodonite_nugget": "Rhodonite Klompje",
+  "item.rhodonite.item_rhodonite_heart": "Rhodonite Hart",
+  "item.rhodonite.item_food_rhodonite_apple": "Rhodonite Appel",
+
+  "item.rhodonite.item_fluorite_nugget": "Fluorite Klompje",
+  "item.rhodonite.item_fluorite_crystal": "Fluorite Kristal",
+
+  "item.rhodonite.item_obsidian_rod": "Obsidiaan Stok",
+
+  "item.rhodonite.item_armor_rhodonite_helmet": "Rhodonite Helm",
+  "item.rhodonite.item_armor_rhodonite_chestplate": "Rhodonite Shirt",
+  "item.rhodonite.item_armor_rhodonite_leggings": "Rhodonite Broek",
+  "item.rhodonite.item_armor_rhodonite_boots": "Rhodonite Schoenen",
+
+  "item.rhodonite.item_armor_fluorite_helmet": "Fluorite Helm",
+  "item.rhodonite.item_armor_fluorite_chestplate": "Fluorite Shirt",
+  "item.rhodonite.item_armor_fluorite_leggings": "Fluorite Broek",
+  "item.rhodonite.item_armor_fluorite_boots": "Fluorite Schoenen",
+
+  "item.rhodonite.item_tool_rhodonite_sword_noodle": "Slecht Rhodonite Zwaard",
+  "item.rhodonite.item_tool_rhodonite_sword": "Rhodonite Zwaard",
+  "item.rhodonite.item_tool_rhodonite_pickaxe": "Rhodonite Pikhouweel",
+  "item.rhodonite.item_tool_rhodonite_shovel": "Rhodonite Schep",
+  "item.rhodonite.item_tool_rhodonite_axe": "Rhodonite Bijl",
+  "item.rhodonite.item_tool_rhodonite_hoe": "Rhodonite Schoffel",
+
+  "item.rhodonite.item_tool_fluorite_sword": "Fluorite Zwaard",
+  "item.rhodonite.item_tool_fluorite_pickaxe": "Fluorite Pikhouweel",
+  "item.rhodonite.item_tool_fluorite_shovel": "Fluorite Schep",
+  "item.rhodonite.item_tool_fluorite_axe": "Fluorite Bijl",
+  "item.rhodonite.item_tool_fluorite_hoe": "Fluorite Schoffel",
+
+  "block.rhodonite.block_rhodonite": "Rhodonite Blok",
+  "block.rhodonite.block_ore_rhodonite": "Rhodonite Erts",
+  "block.rhodonite.block_fluorite": "Fluorite Block",
+  "block.rhodonite.block_ore_fluorite": "Fluorite Erts"
+}

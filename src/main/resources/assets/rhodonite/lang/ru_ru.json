@@ -1,0 +1,47 @@
+{
+  "itemGroup.tab_rhodonite": "Родонит",
+  
+  "item.rhodonite.item_rhodonite_dust": "Родонитовая пыль",
+  "item.rhodonite.item_rhodonite_ingot": "Родонитовый слиток",
+  "item.rhodonite.item_rhodonite_crystal": "Родонитовый кристал",
+  "item.rhodonite.item_rhodonite_crystal_infused": "Заряженный родонитовый кристал",
+  "item.rhodonite.item_rhodonite_sword_handle": "Рукоять родонитового меча",
+  "item.rhodonite.item_rhodonite_sword_blade": "Родонитовое лезвие",
+  "item.rhodonite.item_rhodonite_sharpening_kit": "Родонитовое точило комплект",
+  "item.rhodonite.item_rhodonite_nugget": "Кусочек родонита",
+  "item.rhodonite.item_rhodonite_heart": "Родонитовое сердце",
+  "item.rhodonite.item_food_rhodonite_apple": "Родонитовое яблоко",
+  
+  "item.rhodonite.item_fluorite_nugget": "Флюоритовый слиток",
+  "item.rhodonite.item_fluorite_crystal": "Флюоритовый кристал",
+  
+  "item.rhodonite.item_obsidian_rod": "Обсидиановый стержень",
+  
+  "item.rhodonite.item_armor_rhodonite_helmet": "Родонитовый шлем",
+  "item.rhodonite.item_armor_rhodonite_chestplate": "Родонитовый нагрудник",
+  "item.rhodonite.item_armor_rhodonite_leggings": "Родонитовые поножи",
+  "item.rhodonite.item_armor_rhodonite_boots": "Родонитовые ботинки",
+  
+  "item.rhodonite.item_armor_fluorite_helmet": "Флюоритовый шлем",
+  "item.rhodonite.item_armor_fluorite_chestplate": "Флюоритовый нагрудник",
+  "item.rhodonite.item_armor_fluorite_leggings": "Флюоритовые поножи",
+  "item.rhodonite.item_armor_fluorite_boots": "Флюоритовые ботинки",
+  
+  "item.rhodonite.item_tool_rhodonite_sword_noodle": "Заготовка родонитового меча",
+  "item.rhodonite.item_tool_rhodonite_sword": "Родонитовый меч",
+  "item.rhodonite.item_tool_rhodonite_pickaxe": "Родонитовая кирка",
+  "item.rhodonite.item_tool_rhodonite_shovel": "Родонитовая лопата",
+  "item.rhodonite.item_tool_rhodonite_axe": "Родонитовый топор",
+  "item.rhodonite.item_tool_rhodonite_hoe": "Родонитовая мотыга",
+  
+  "item.rhodonite.item_tool_fluorite_sword": "Флюоритовый меч",
+  "item.rhodonite.item_tool_fluorite_pickaxe": "Флюоритовая кирка",
+  "item.rhodonite.item_tool_fluorite_shovel": "Флюоритовая лопата",
+  "item.rhodonite.item_tool_fluorite_axe": "Флюоритовый топор",
+  "item.rhodonite.item_tool_fluorite_hoe": "Флюоритовая мотыга",
+  
+  "block.rhodonite.block_rhodonite": "Родонитовый блок",
+  "block.rhodonite.block_ore_rhodonite": "Родонитовая руда",
+  "block.rhodonite.block_fluorite": "Флюоритовый блок",
+  "block.rhodonite.block_ore_fluorite": "Флюоритовая руда"
+}

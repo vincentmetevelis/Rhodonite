@@ -1,0 +1,47 @@
+{
+  "itemGroup.tab_rhodonite": "Rhodonite",
+  
+  "item.rhodonite.item_rhodonite_dust": "Polvere di Rhodonite",
+  "item.rhodonite.item_rhodonite_ingot": "Lingotto di Rhodonite",
+  "item.rhodonite.item_rhodonite_crystal": "Cristallo di Rhodonite",
+  "item.rhodonite.item_rhodonite_crystal_infused": "Cristallo Infuso di Rhodonite",
+  "item.rhodonite.item_rhodonite_sword_handle": "Manico per Spada di Rhodonite",
+  "item.rhodonite.item_rhodonite_sword_blade": "Lama per Spada di Rhodonite",
+  "item.rhodonite.item_rhodonite_sharpening_kit": "Kit per affilatura di Rhodonite",
+  "item.rhodonite.item_rhodonite_nugget": "Pepita di Rhodonite",
+  "item.rhodonite.item_rhodonite_heart": "Cuore di Rhodonite",
+  "item.rhodonite.item_food_rhodonite_apple": "Mela di Rhodonite",
+  
+  "item.rhodonite.item_fluorite_nugget": "Pepita di Fluorite",
+  "item.rhodonite.item_fluorite_crystal": "Cristallo di Fluorite",
+  
+  "item.rhodonite.item_obsidian_rod": "Asta di Ossidiana",
+  
+  "item.rhodonite.item_armor_rhodonite_helmet": "Elmo di Rhodonite",
+  "item.rhodonite.item_armor_rhodonite_chestplate": "Corazza di Rhodonite",
+  "item.rhodonite.item_armor_rhodonite_leggings": "Gambiere di Rhodonite",
+  "item.rhodonite.item_armor_rhodonite_boots": "Stivali di Rhodonite",
+  
+  "item.rhodonite.item_armor_fluorite_helmet": "Elmo di Fluorite",
+  "item.rhodonite.item_armor_fluorite_chestplate": "Corazza di Fluorite",
+  "item.rhodonite.item_armor_fluorite_leggings": "Gambiere di Fluorite",
+  "item.rhodonite.item_armor_fluorite_boots": "Stivali di Fluorite",
+  
+  "item.rhodonite.item_tool_rhodonite_sword_noodle": "Spada Debole di Rhodonite",
+  "item.rhodonite.item_tool_rhodonite_sword": "Spada di Rhodonite",
+  "item.rhodonite.item_tool_rhodonite_pickaxe": "Piccone di Rhodonite",
+  "item.rhodonite.item_tool_rhodonite_shovel": "Pala di Rhodonite",
+  "item.rhodonite.item_tool_rhodonite_axe": "Ascia di Rhodonite",
+  "item.rhodonite.item_tool_rhodonite_hoe": "Zappa di Rhodonite",
+  
+  "item.rhodonite.item_tool_fluorite_sword": "Spada di Fluorite",
+  "item.rhodonite.item_tool_fluorite_pickaxe": "Piccone di Fluorite",
+  "item.rhodonite.item_tool_fluorite_shovel": "Pala di Fluorite",
+  "item.rhodonite.item_tool_fluorite_axe": "Ascia di Fluorite",
+  "item.rhodonite.item_tool_fluorite_hoe": "Zappa di Fluorite",
+  
+  "block.rhodonite.block_rhodonite": "Blocco di Rhodonite",
+  "block.rhodonite.block_ore_rhodonite": "Rhodonite Grezzo",
+  "block.rhodonite.block_fluorite": "Blocco di Fluorite",
+  "block.rhodonite.block_ore_fluorite": "Fluorite Grezzo"
+}

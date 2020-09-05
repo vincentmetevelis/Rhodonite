@@ -1,0 +1,45 @@
+{
+  "item.rhodonite.item_rhodonite_dust": "Rhodonitstaub",
+  "item.rhodonite.item_rhodonite_ingot": "Rhodonitbarren",
+  "item.rhodonite.item_rhodonite_crystal": "Rhodonitkristall",
+  "item.rhodonite.item_rhodonite_crystal_infused": "Infundierter Rhodonitkristall",
+  "item.rhodonite.item_rhodonite_sword_handle": "Rhodonit Schwertgriff",
+  "item.rhodonite.item_rhodonite_sword_blade": "Rhodonit Schwertklinge",
+  "item.rhodonite.item_rhodonite_sharpening_kit": "Rhodonit Schärfungs-Kit",
+  "item.rhodonite.item_rhodonite_nugget": "Rhodonitklumpen",
+  "item.rhodonite.item_rhodonite_heart": "Rhodonitherz",
+  "item.rhodonite.item_food_rhodonite_apple": "Rhodonitapfel",
+  
+  "item.rhodonite.item_fluorite_nugget": "Fluoritklumpen",
+  "item.rhodonite.item_fluorite_crystal": "Fluoritkristall",
+  
+  "item.rhodonite.item_obsidian_rod": "Obsidianstab",
+  
+  "item.rhodonite.item_armor_rhodonite_helmet": "Rhodonithelm",
+  "item.rhodonite.item_armor_rhodonite_chestplate": "Rhodonitharnisch",
+  "item.rhodonite.item_armor_rhodonite_leggings": "Rhodonitbeinschutz",
+  "item.rhodonite.item_armor_rhodonite_boots": "Rhodonitstiefel",
+  
+  "item.rhodonite.item_armor_fluorite_helmet": "Fluorithelm",
+  "item.rhodonite.item_armor_fluorite_chestplate": "Fluoritharnisch",
+  "item.rhodonite.item_armor_fluorite_leggings": "Fluoritbeinschutz",
+  "item.rhodonite.item_armor_fluorite_boots": "Fluoritstiefel",
+  
+  "item.rhodonite.item_tool_rhodonite_sword_noodle": "Nudel-Rhodonitschwert",
+  "item.rhodonite.item_tool_rhodonite_sword": "Rhodonitschwert",
+  "item.rhodonite.item_tool_rhodonite_pickaxe": "Rhodonitspitzhacke",
+  "item.rhodonite.item_tool_rhodonite_shovel": "Rhodonitschaufel",
+  "item.rhodonite.item_tool_rhodonite_axe": "Rhodonitaxt",
+  "item.rhodonite.item_tool_rhodonite_hoe": "Rhodonithacke",
+  
+  "item.rhodonite.item_tool_fluorite_sword": "Fluoritschwert",
+  "item.rhodonite.item_tool_fluorite_pickaxe": "Fluoritspitzhacke",
+  "item.rhodonite.item_tool_fluorite_shovel": "Fluoritschaufel",
+  "item.rhodonite.item_tool_fluorite_axe": "Fluoritaxt",
+  "item.rhodonite.item_tool_fluorite_hoe": "Fluorithacke",
+  
+  "block.rhodonite.block_rhodonite": "Rhodonitblock",
+  "block.rhodonite.block_ore_rhodonite": "Rhodoniterz",
+  "block.rhodonite.block_fluorite": "Fluoritblock",
+  "block.rhodonite.block_ore_fluorite": "Fluoriterz"
+}

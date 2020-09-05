@@ -2,12 +2,16 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "pool_block_rhodonite",
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "rhodonite:block_rhodonite"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
         }
       ]
     }

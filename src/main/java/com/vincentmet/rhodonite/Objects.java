@@ -35,7 +35,7 @@ public class Objects {
 
             public static Item itemArmorFluoriteHelmet;
             public static Item itemArmorFluoriteChest;
-            public static Item itemArmorFluoriteLeggins;
+            public static Item itemArmorFluoriteLeggings;
             public static Item itemArmorFluoriteBoots;
         }
 

@@ -1,7 +1,6 @@
 package com.vincentmet.rhodonite;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
 
 public class DefaultItem extends Item{

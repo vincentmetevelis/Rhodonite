@@ -1,0 +1,47 @@
+{
+  "itemGroup.tab_rhodonite": "Rhodonite",
+  
+  "item.rhodonite.item_rhodonite_dust": "Pó de Rodonite",
+  "item.rhodonite.item_rhodonite_ingot": "Barra de Rodonite",
+  "item.rhodonite.item_rhodonite_crystal": "Cristal de Rodonite",
+  "item.rhodonite.item_rhodonite_crystal_infused": "Cristal de Rodonite Infundido",
+  "item.rhodonite.item_rhodonite_sword_handle": "Cabo de Espada de Rodonite",
+  "item.rhodonite.item_rhodonite_sword_blade": "Lâmina de Espada de Rodonite",
+  "item.rhodonite.item_rhodonite_sharpening_kit": "Pedra de Amolar de Rodonite",
+  "item.rhodonite.item_rhodonite_nugget": "Pepita de Rodonite",
+  "item.rhodonite.item_rhodonite_heart": "Coração de Rodonite",
+  "item.rhodonite.item_food_rhodonite_apple": "Maçã de Rodonite",
+  
+  "item.rhodonite.item_fluorite_nugget": "Pepita de Fluorite",
+  "item.rhodonite.item_fluorite_crystal": "Cristal de Fluorite",
+  
+  "item.rhodonite.item_obsidian_rod": "Bastão de Obsidiana",
+  
+  "item.rhodonite.item_armor_rhodonite_helmet": "Helmo de Rodonite",
+  "item.rhodonite.item_armor_rhodonite_chestplate": "Peitoral de Rodonite",
+  "item.rhodonite.item_armor_rhodonite_leggings": "Calças de Rodonite",
+  "item.rhodonite.item_armor_rhodonite_boots": "Botas de Rodonite",
+  
+  "item.rhodonite.item_armor_fluorite_helmet": "Helmo de Fluorite",
+  "item.rhodonite.item_armor_fluorite_chestplate": "Peitoral de Fluorite",
+  "item.rhodonite.item_armor_fluorite_leggings": "Calças de Fluorite",
+  "item.rhodonite.item_armor_fluorite_boots": "Botas de Fluorite",
+  
+  "item.rhodonite.item_tool_rhodonite_sword_noodle": "Espada de Rodonite Fraca",
+  "item.rhodonite.item_tool_rhodonite_sword": "Espada de Rodonite",
+  "item.rhodonite.item_tool_rhodonite_pickaxe": "Picareta de Rodonite",
+  "item.rhodonite.item_tool_rhodonite_shovel": "Pá de Rodonite",
+  "item.rhodonite.item_tool_rhodonite_axe": "Machado de Rodonite",
+  "item.rhodonite.item_tool_rhodonite_hoe": "Enxada de Rodonite",
+  
+  "item.rhodonite.item_tool_fluorite_sword": "Espada de Fluorite",
+  "item.rhodonite.item_tool_fluorite_pickaxe": "Picareta de Fluorite",
+  "item.rhodonite.item_tool_fluorite_shovel": "Pá de Fluorite",
+  "item.rhodonite.item_tool_fluorite_axe": "Machado de Fluorite",
+  "item.rhodonite.item_tool_fluorite_hoe": "Enxada de Fluorite",
+  
+  "block.rhodonite.block_rhodonite": "Bloco de Rodonite",
+  "block.rhodonite.block_ore_rhodonite": "Minério de Rodonite",
+  "block.rhodonite.block_fluorite": "Bloco de Fluorite",
+  "block.rhodonite.block_ore_fluorite": "Minério de Fluorite"
+}

@@ -2,10 +2,9 @@ package com.vincentmet.rhodonite;
 
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;
+import java.nio.file.Path;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.common.Mod;
-
-import java.nio.file.Path;
 
 @Mod.EventBusSubscriber
 public class Config {

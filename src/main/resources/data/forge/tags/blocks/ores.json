@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"rhodonite:block_ore_rhodonite",
+		"rhodonite:block_ore_fluorite"
+	]
+}
