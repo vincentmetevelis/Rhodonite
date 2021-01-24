@@ -1,14 +1,11 @@
 package com.vincentmet.rhodonite.items;
 
 import com.vincentmet.rhodonite.*;
-import java.util.*;
-import net.minecraft.entity.Entity;
+import java.util.Random;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.*;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.registries.ForgeRegistryEntry;
 
 public class ItemHeartOfRhodonite extends DefaultItem {
     public ItemHeartOfRhodonite(ResourceLocation resourceLocation, int stacksize, ItemGroup tab) {

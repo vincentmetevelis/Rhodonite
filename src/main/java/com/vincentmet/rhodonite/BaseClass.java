@@ -2,12 +2,15 @@ package com.vincentmet.rhodonite;
 
 import com.vincentmet.rhodonite.lib.Ref;
 import com.vincentmet.rhodonite.worldgen.WorldGen;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 
@@ -28,7 +31,9 @@ public class BaseClass {
         MinecraftForge.EVENT_BUS.register(EventHandler.class);
     }
 
-    private void setup(final FMLCommonSetupEvent event){
-        WorldGen.addOresToBiome();
+    private void setup(final FMLLoadCompleteEvent event){
+        WorldGen.registerFeature(Objects.Blocks.blockOreFluorite, OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, 10, 30, 10);
+        WorldGen.registerFeature(Objects.Blocks.blockOreRhodonite, new BlockMatchRuleTest(Blocks.END_STONE), 10, 100, 20);
+        WorldGen.setupGen();
     }
 }
