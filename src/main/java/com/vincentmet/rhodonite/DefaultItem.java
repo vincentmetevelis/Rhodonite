@@ -1,11 +1,11 @@
 package com.vincentmet.rhodonite;
 
-import net.minecraft.item.*;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.*;
 
 public class DefaultItem extends Item{
-    public DefaultItem(ResourceLocation resourceLocation, int stacksize, ItemGroup tab) {
-        super(new Item.Properties().maxStackSize(stacksize).group(tab));
+    public DefaultItem(ResourceLocation resourceLocation, int stacksize, CreativeModeTab tab) {
+        super(new Item.Properties().stacksTo(stacksize).tab(tab));
         setRegistryName(resourceLocation);
     }
 }

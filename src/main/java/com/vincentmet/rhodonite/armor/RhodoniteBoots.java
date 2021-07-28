@@ -3,41 +3,41 @@ package com.vincentmet.rhodonite.armor;
 import com.vincentmet.rhodonite.Config;
 import java.util.List;
 import javax.annotation.Nullable;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
-import net.minecraft.util.text.*;
-import net.minecraft.world.World;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.*;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 
-public class RhodoniteBoots extends ArmorItem {
-    public RhodoniteBoots(IArmorMaterial armorMaterial, EquipmentSlotType equipmentSlotType, Properties properties) {
+public class RhodoniteBoots extends ArmorItem{
+    public RhodoniteBoots(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlotType, Properties properties) {
         super(armorMaterial, equipmentSlotType, properties);
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(new TranslationTextComponent(TextFormatting.BLUE + "Ability: Flight"));
-        tooltip.add(new TranslationTextComponent(TextFormatting.DARK_AQUA + "Use: Equip The Full Set"));
+    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag flagIn) {
+        tooltip.add(new TranslatableComponent(ChatFormatting.BLUE + "Ability: Flight"));
+        tooltip.add(new TranslatableComponent(ChatFormatting.DARK_AQUA + "Use: Equip The Full Set"));
     }
 
     @Override
-    public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
+    public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(Config.RHODONITE_ARMOR_FLIGHT.get()){
-            ItemStack stackHead = player.getItemStackFromSlot(EquipmentSlotType.HEAD);
-            ItemStack stackChest = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
-            ItemStack stackLegging = player.getItemStackFromSlot(EquipmentSlotType.LEGS);
-            ItemStack stackBoots = player.getItemStackFromSlot(EquipmentSlotType.FEET);
+            ItemStack stackHead = player.getItemBySlot(EquipmentSlot.HEAD);
+            ItemStack stackChest = player.getItemBySlot(EquipmentSlot.CHEST);
+            ItemStack stackLegging = player.getItemBySlot(EquipmentSlot.LEGS);
+            ItemStack stackBoots = player.getItemBySlot(EquipmentSlot.FEET);
 
             boolean isWearingFullSetOfRhodonite = stackHead != null && stackHead.getItem() instanceof RhodoniteHelmet && stackChest != null && stackChest.getItem() instanceof RhodoniteChestplate && stackLegging != null && stackLegging.getItem() instanceof RhodoniteLeggings && stackBoots != null && stackBoots.getItem() instanceof RhodoniteBoots;
             if(!player.getPersistentData().contains("wearingFullRhodoniteArmor"))player.getPersistentData().putBoolean("wearingFullRhodoniteArmor", false);
             boolean wasWearingArmorLastTick = player.getPersistentData().getBoolean("wearingFullRhodoniteArmor");
 
             if(!isWearingFullSetOfRhodonite && wasWearingArmorLastTick && !player.isCreative()){
-                player.abilities.allowFlying = false;
-                player.abilities.isFlying = false;
+                player.getAbilities().mayfly = false;
+                player.getAbilities().flying = false;
             }else if(isWearingFullSetOfRhodonite){
-                player.abilities.allowFlying = true;
+                player.getAbilities().mayfly = true;
             }
             player.getPersistentData().putBoolean("wearingFullRhodoniteArmor", isWearingFullSetOfRhodonite);
         }

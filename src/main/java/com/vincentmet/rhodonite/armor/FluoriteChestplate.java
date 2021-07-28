@@ -1,11 +1,10 @@
 package com.vincentmet.rhodonite.armor;
 
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.*;
 
-public class FluoriteChestplate extends ArmorItem {
-    public FluoriteChestplate(IArmorMaterial armorMaterial, EquipmentSlotType equipmentSlotType, Properties properties) {
+public class FluoriteChestplate extends ArmorItem{
+    public FluoriteChestplate(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlotType, Properties properties) {
         super(armorMaterial, equipmentSlotType, properties);
     }
 }
-

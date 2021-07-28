@@ -1,11 +1,9 @@
 package com.vincentmet.rhodonite;
 
-import com.vincentmet.rhodonite.lib.Ref;
-import com.vincentmet.rhodonite.worldgen.WorldGen;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.*;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -16,9 +14,9 @@ import net.minecraftforge.fml.loading.FMLPaths;
 
 @Mod(Ref.MODID)
 public class BaseClass {
-    public static final ItemGroup tab = new ItemGroup("tab_rhodonite") {
+    public static final CreativeModeTab tab = new CreativeModeTab("tab_rhodonite") {
         @Override
-        public ItemStack createIcon() {
+        public ItemStack makeIcon() {
             return new ItemStack(Objects.Items.Tools.itemToolRhodoniteSword);
         }
     };
@@ -32,8 +30,8 @@ public class BaseClass {
     }
 
     private void setup(final FMLLoadCompleteEvent event){
-        WorldGen.registerFeature(Objects.Blocks.blockOreFluorite, OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, 10, 30, 10);
-        WorldGen.registerFeature(Objects.Blocks.blockOreRhodonite, new BlockMatchRuleTest(Blocks.END_STONE), 10, 100, 20);
+        WorldGen.registerFeature(Objects.Blocks.blockOreFluorite, OreConfiguration.Predicates.NATURAL_STONE, 10, 30, 10);
+        WorldGen.registerFeature(Objects.Blocks.blockOreRhodonite, new BlockMatchTest(Blocks.END_STONE), 10, 100, 20);
         WorldGen.setupGen();
     }
 }
