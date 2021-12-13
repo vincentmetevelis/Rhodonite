@@ -8,9 +8,11 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
 
+import javax.annotation.Nonnull;
+
 public enum ArmorMaterials implements ArmorMaterial{
-    RHODONITE(new ResourceLocation(Ref.MODID, "material_armor_rhodonite"), 1000, new int[]{8, 14, 20, 8}, 30, SoundEvents.ARMOR_EQUIP_DIAMOND, 40F, ()->{return Ingredient.of(Objects.Items.itemRhodoniteIngot);}, 4),
-    FLUORITE(new ResourceLocation(Ref.MODID, "material_armor_fluorite"), 250, new int[]{4, 7, 10, 4}, 30, SoundEvents.ARMOR_EQUIP_DIAMOND, 20F, ()->{return Ingredient.of(Objects.Items.itemFluoriteCrystal);}, 2);
+    RHODONITE(new ResourceLocation(Ref.MODID, "material_armor_rhodonite"), 1000, new int[]{8, 14, 20, 8}, 30, SoundEvents.ARMOR_EQUIP_DIAMOND, 40F, ()-> Ingredient.of(Objects.Items.itemRhodoniteIngot), 4),
+    FLUORITE(new ResourceLocation(Ref.MODID, "material_armor_fluorite"), 250, new int[]{4, 7, 10, 4}, 30, SoundEvents.ARMOR_EQUIP_DIAMOND, 20F, ()-> Ingredient.of(Objects.Items.itemFluoriteCrystal), 2);
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{4, 7, 8, 5};
     private final ResourceLocation name;
@@ -48,16 +50,19 @@ public enum ArmorMaterials implements ArmorMaterial{
         return enchantability;
     }
 
+    @Nonnull
     @Override
     public SoundEvent getEquipSound() {
         return soundEvent;
     }
 
+    @Nonnull
     @Override
     public Ingredient getRepairIngredient() {
         return repairMaterial;
     }
 
+    @Nonnull
     @Override
     public String getName() {
         return name.toString();

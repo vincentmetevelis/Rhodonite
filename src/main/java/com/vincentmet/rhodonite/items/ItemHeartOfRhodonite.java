@@ -7,13 +7,15 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.*;
 
+import javax.annotation.Nonnull;
+
 public class ItemHeartOfRhodonite extends DefaultItem {
     public ItemHeartOfRhodonite(ResourceLocation resourceLocation, int stacksize, CreativeModeTab tab) {
         super(resourceLocation, stacksize, tab);
     }
     
     @Override
-    public void onCraftedBy(ItemStack itemstack, Level world, Player entity) {
+    public void onCraftedBy(@Nonnull ItemStack itemstack, @Nonnull Level world, @Nonnull Player entity) {
         if(Config.HEART_CRAFTING_EXPLOSION.get()){
             if(new Random().nextInt(100) <= Config.HEART_CRAFTING_EXPLOSION_CHANCE.get()){
                 float var4 = 1.0F;

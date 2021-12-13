@@ -1,8 +1,8 @@
 package com.vincentmet.rhodonite;
 
+import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -12,9 +12,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 
+import javax.annotation.Nonnull;
+
 @Mod(Ref.MODID)
 public class BaseClass {
     public static final CreativeModeTab tab = new CreativeModeTab("tab_rhodonite") {
+        @Nonnull
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(Objects.Items.Tools.itemToolRhodoniteSword);
@@ -30,8 +33,9 @@ public class BaseClass {
     }
 
     private void setup(final FMLLoadCompleteEvent event){
-        WorldGen.registerFeature(Objects.Blocks.blockOreFluorite, OreConfiguration.Predicates.NATURAL_STONE, 10, 30, 10);
-        WorldGen.registerFeature(Objects.Blocks.blockOreRhodonite, new BlockMatchTest(Blocks.END_STONE), 10, 100, 20);
-        WorldGen.setupGen();
+        //TODO
+        //WorldGen.registerFeature(Objects.Blocks.blockOreFluorite, OreFeatures.NATURAL_STONE, 10, 30, 10);
+        //WorldGen.registerFeature(Objects.Blocks.blockOreRhodonite, new BlockMatchTest(Blocks.END_STONE), 10, 100, 20);
+        //WorldGen.setupGen();
     }
 }
