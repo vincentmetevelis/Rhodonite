@@ -1,6 +1,7 @@
 package com.vincentmet.rhodonite.blocks;
 
 import java.util.List;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.*;
@@ -15,7 +16,7 @@ public class RhodoniteOre extends Block{
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter player, List<Component> tooltip, TooltipFlag advanced) {
+    public void appendHoverText(@Nonnull ItemStack stack, @Nullable BlockGetter player, @Nonnull List<Component> tooltip, @Nonnull TooltipFlag advanced) {
         super.appendHoverText(stack, player, tooltip, advanced);
         tooltip.add(new TranslatableComponent(ChatFormatting.BLUE + "Can Be Found In The End"));
     }

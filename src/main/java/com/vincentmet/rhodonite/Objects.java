@@ -30,7 +30,7 @@ public class Objects {
         public static class Armor{
             public static Item itemArmorRhodoniteHelmet;
             public static Item itemArmorRhodoniteChest;
-            public static Item itemArmorRhodoniteLeggins;
+            public static Item itemArmorRhodoniteLeggings;
             public static Item itemArmorRhodoniteBoots;
 
             public static Item itemArmorFluoriteHelmet;

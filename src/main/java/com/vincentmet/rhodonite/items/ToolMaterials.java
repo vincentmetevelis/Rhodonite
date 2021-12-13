@@ -5,10 +5,12 @@ import java.util.function.Supplier;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
+import javax.annotation.Nonnull;
+
 public enum ToolMaterials implements Tier{
-    RHODONITE(6, 9876, 50, 12, 30, ()->{return Ingredient.of(Objects.Items.itemRhodoniteIngot);}),
-    RHODONITE_NOODLE(1, 42, 3, 1, 5, ()->{return Ingredient.of(Objects.Items.itemRhodoniteIngot);}),
-    FLUORITE(5, 1337, 15, 5, 30, ()->{return Ingredient.of(Objects.Items.itemFluoriteCrystal);});
+    RHODONITE(6, 9876, 50, 12, 30, ()-> Ingredient.of(Objects.Items.itemRhodoniteIngot)),
+    RHODONITE_NOODLE(1, 42, 3, 1, 5, ()-> Ingredient.of(Objects.Items.itemRhodoniteIngot)),
+    FLUORITE(5, 1337, 15, 5, 30, ()-> Ingredient.of(Objects.Items.itemFluoriteCrystal));
 
     private final int harvestLevel;
     private final int maxUses;
@@ -51,6 +53,7 @@ public enum ToolMaterials implements Tier{
         return this.enchantability;
     }
 
+    @Nonnull
     @Override
     public Ingredient getRepairIngredient() {
         return this.repairMaterial;

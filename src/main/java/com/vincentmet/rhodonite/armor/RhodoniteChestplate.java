@@ -2,6 +2,7 @@ package com.vincentmet.rhodonite.armor;
 
 import com.vincentmet.rhodonite.Config;
 import java.util.List;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.*;
@@ -16,7 +17,7 @@ public class RhodoniteChestplate extends ArmorItem{
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(@Nonnull ItemStack stack, @Nullable Level world, List<Component> tooltip, @Nonnull TooltipFlag flag) {
         tooltip.add(new TranslatableComponent(ChatFormatting.BLUE + "Ability: Flight"));
         tooltip.add(new TranslatableComponent(ChatFormatting.DARK_AQUA + "Use: Equip The Full Set"));
     }
@@ -29,7 +30,7 @@ public class RhodoniteChestplate extends ArmorItem{
             ItemStack stackLegging = player.getItemBySlot(EquipmentSlot.LEGS);
             ItemStack stackBoots = player.getItemBySlot(EquipmentSlot.FEET);
 
-            boolean isWearingFullSetOfRhodonite = stackHead != null && stackHead.getItem() instanceof RhodoniteHelmet && stackChest != null && stackChest.getItem() instanceof RhodoniteChestplate && stackLegging != null && stackLegging.getItem() instanceof RhodoniteLeggings && stackBoots != null && stackBoots.getItem() instanceof RhodoniteBoots;
+            boolean isWearingFullSetOfRhodonite = stackHead.getItem() instanceof RhodoniteHelmet && stackChest.getItem() instanceof RhodoniteChestplate && stackLegging.getItem() instanceof RhodoniteLeggings && stackBoots.getItem() instanceof RhodoniteBoots;
             if(!player.getPersistentData().contains("wearingFullRhodoniteArmor"))player.getPersistentData().putBoolean("wearingFullRhodoniteArmor", false);
             boolean wasWearingArmorLastTick = player.getPersistentData().getBoolean("wearingFullRhodoniteArmor");
 
