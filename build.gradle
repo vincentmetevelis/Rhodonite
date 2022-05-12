@@ -15,10 +15,10 @@ repositories {
     maven { url = 'https://dvs1.progwml6.com/files/maven/' }
     maven { url = 'https://modmaven.k-4u.nl' }
 }
-version = '1.17.1-1.0.0'
+version = '1.17.1-1.0.1'
 group = 'com.vincentmet.rhodonite'
 archivesBaseName = 'rhodonite'
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '16'
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 minecraft {
     mappings channel: 'official', version: '1.17.1'
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -52,7 +52,7 @@ minecraft {
 }
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.0.13'
+    minecraft 'net.minecraftforge:forge:1.17.1-37.1.1'
 
     //compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     //runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")

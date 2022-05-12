@@ -11,7 +11,6 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Material;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -47,32 +46,32 @@ public class EventHandler {
 
                 Objects.Items.Tools.itemToolRhodoniteSwordNoodle = new SwordItem(ToolMaterials.RHODONITE_NOODLE, 1, 1, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_rhodonite_sword_noodle")),
                 Objects.Items.Tools.itemToolRhodoniteSword = new SwordItem(ToolMaterials.RHODONITE, 9, 9, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_rhodonite_sword")),
-                Objects.Items.Tools.itemToolRhodonitePickaxe = new PickaxeItem(ToolMaterials.RHODONITE, 2, 9, new Item.Properties().stacksTo(1).addToolType(ToolType.PICKAXE, 6).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_rhodonite_pickaxe")),
+                Objects.Items.Tools.itemToolRhodonitePickaxe = new PickaxeItem(ToolMaterials.RHODONITE, 2, 9, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_rhodonite_pickaxe")),
                 Objects.Items.Tools.itemToolRhodoniteShovel = new ShovelItem(ToolMaterials.RHODONITE, 2, 9, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_rhodonite_shovel")),
                 Objects.Items.Tools.itemToolRhodoniteAxe = new AxeItem(ToolMaterials.RHODONITE, 2, 9, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_rhodonite_axe")),
                 Objects.Items.Tools.itemToolRhodoniteHoe = new HoeItem(ToolMaterials.RHODONITE, 2, 2, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_rhodonite_hoe")),
 
                 Objects.Items.Tools.itemToolFluoriteSword = new SwordItem(ToolMaterials.FLUORITE, 9, 9, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_fluorite_sword")),
-                Objects.Items.Tools.itemToolFluoritePickaxe = new PickaxeItem(ToolMaterials.FLUORITE, 2, 9, new Item.Properties().stacksTo(1).addToolType(ToolType.PICKAXE, 5).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_fluorite_pickaxe")),
+                Objects.Items.Tools.itemToolFluoritePickaxe = new PickaxeItem(ToolMaterials.FLUORITE, 2, 9, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_fluorite_pickaxe")),
                 Objects.Items.Tools.itemToolFluoriteShovel = new ShovelItem(ToolMaterials.FLUORITE, 2, 9, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_fluorite_shovel")),
                 Objects.Items.Tools.itemToolFluoriteAxe = new AxeItem(ToolMaterials.FLUORITE, 2, 9, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_fluorite_axe")),
                 Objects.Items.Tools.itemToolFluoriteHoe = new HoeItem(ToolMaterials.FLUORITE, 2, 1, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_fluorite_hoe")),
 
-                Objects.Items.BlockItems.itemBlockRhodonite = new BlockItem(Objects.Blocks.blockRhodonite, new Item.Properties().stacksTo(64).tab(BaseClass.tab).addToolType(ToolType.PICKAXE, 5)).setRegistryName(new ResourceLocation(Ref.MODID, "block_rhodonite")),
-                Objects.Items.BlockItems.itemBlockOreRhodonite = new BlockItem(Objects.Blocks.blockOreRhodonite, new Item.Properties().stacksTo(64).tab(BaseClass.tab).addToolType(ToolType.PICKAXE, 5)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_rhodonite")),
-                Objects.Items.BlockItems.itemBlockFluorite = new BlockItem(Objects.Blocks.blockFluorite, new Item.Properties().stacksTo(64).tab(BaseClass.tab).addToolType(ToolType.PICKAXE, 4)).setRegistryName(new ResourceLocation(Ref.MODID, "block_fluorite")),
-                Objects.Items.BlockItems.itemBlockOreFluorite = new BlockItem(Objects.Blocks.blockOreFluorite, new Item.Properties().stacksTo(64).tab(BaseClass.tab).addToolType(ToolType.PICKAXE, 4)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_fluorite"))
+                Objects.Items.BlockItems.itemBlockRhodonite = new BlockItem(Objects.Blocks.blockRhodonite, new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "block_rhodonite")),
+                Objects.Items.BlockItems.itemBlockOreRhodonite = new BlockItem(Objects.Blocks.blockOreRhodonite, new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_rhodonite")),
+                Objects.Items.BlockItems.itemBlockFluorite = new BlockItem(Objects.Blocks.blockFluorite, new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "block_fluorite")),
+                Objects.Items.BlockItems.itemBlockOreFluorite = new BlockItem(Objects.Blocks.blockOreFluorite, new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_fluorite"))
         );
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(
-                Objects.Blocks.blockRhodonite = new Block(Block.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(6F).harvestTool(ToolType.PICKAXE).harvestLevel(5)).setRegistryName(new ResourceLocation(Ref.MODID, "block_rhodonite")),
-                Objects.Blocks.blockOreRhodonite = new RhodoniteOre(Block.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6F).harvestTool(ToolType.PICKAXE).harvestLevel(5)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_rhodonite")),
+                Objects.Blocks.blockRhodonite = new Block(Block.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(6F)).setRegistryName(new ResourceLocation(Ref.MODID, "block_rhodonite")),
+                Objects.Blocks.blockOreRhodonite = new RhodoniteOre(Block.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6F)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_rhodonite")),
 
-                Objects.Blocks.blockFluorite = new Block(Block.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(4F).harvestTool(ToolType.PICKAXE).harvestLevel(4)).setRegistryName(new ResourceLocation(Ref.MODID, "block_fluorite")),
-                Objects.Blocks.blockOreFluorite = new Block(Block.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(4F).harvestTool(ToolType.PICKAXE).harvestLevel(4)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_fluorite"))
+                Objects.Blocks.blockFluorite = new Block(Block.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(4F)).setRegistryName(new ResourceLocation(Ref.MODID, "block_fluorite")),
+                Objects.Blocks.blockOreFluorite = new Block(Block.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(4F)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_fluorite"))
         );
     }
 }
