@@ -1,9 +1,10 @@
-package com.vincentmet.rhodonite.items;
+package com.vincentmet.rhodonite;
 
 import com.vincentmet.rhodonite.Objects;
-import java.util.function.Supplier;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
+
+import java.util.function.Supplier;
 
 public enum ToolMaterials implements Tier{
     RHODONITE(6, 9876, 50, 12, 30, ()->{return Ingredient.of(Objects.Items.itemRhodoniteIngot);}),
@@ -44,7 +45,7 @@ public enum ToolMaterials implements Tier{
     @Override
     public int getLevel() {
         return this.harvestLevel;
-    }
+    }//todo use TierSortingRegistry for toolLevels
 
     @Override
     public int getEnchantmentValue() {

@@ -1,11 +1,9 @@
 modLoader="javafml" #mandatory
-loaderVersion="[37.1,)" #mandatory
+loaderVersion="[40,)" #mandatory
 license="All Rights Reserved"
-credits="vincentmet" #optional
+credits="vincentmet, TheBritishBotherhood, MechWarrior99" #optional
 [[mods]] #mandatory
 modId="rhodonite" #mandatory
-version="1.17.1-1.0.1" #mandatory
+version="1.18.2-1.0.0" #mandatory
 displayName="Rhodonite" #mandatory
-description='''
-Rhodonite!!!
-'''
+description="Rhodonite!!!"

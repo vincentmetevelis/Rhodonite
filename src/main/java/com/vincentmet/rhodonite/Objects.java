@@ -66,8 +66,4 @@ public class Objects {
         public static Block blockOreFluorite;
         public static Block blockFluorite;
     }
-
-    public static class Entities{
-
-    }
 }

@@ -1,11 +1,8 @@
 package com.vincentmet.rhodonite;
 
-import com.vincentmet.rhodonite.armor.*;
-import com.vincentmet.rhodonite.blocks.RhodoniteOre;
-import com.vincentmet.rhodonite.items.*;
-import com.vincentmet.rhodonite.armor.ArmorMaterials;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.effect.*;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -16,7 +13,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Ref.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class EventHandler {
+public class ModEventHandler {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
@@ -24,7 +21,7 @@ public class EventHandler {
                 Objects.Items.itemRhodoniteIngot = new Item(new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_rhodonite_ingot")),
                 Objects.Items.itemRhodoniteCrystal = new Item(new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_rhodonite_crystal")),
                 Objects.Items.itemRhodoniteCrystalInfused = new Item(new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_rhodonite_crystal_infused")),
-                Objects.Items.itemRhodoniteHeart = new ItemHeartOfRhodonite(new ResourceLocation(Ref.MODID, "item_rhodonite_heart"), 64, BaseClass.tab),
+                Objects.Items.itemRhodoniteHeart = new ItemHeartOfRhodonite(new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_rhodonite_heart")),
                 Objects.Items.itemRhodoniteSwordHandle = new Item(new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_rhodonite_sword_handle")),
                 Objects.Items.itemRhodoniteSwordBlade = new Item(new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_rhodonite_sword_blade")),
                 Objects.Items.itemRhodoniteSharpeningKit = new Item(new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_rhodonite_sharpening_kit")),
@@ -34,15 +31,20 @@ public class EventHandler {
                 Objects.Items.itemFluoriteCrystal = new Item(new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_fluorite_crystal")),
                 Objects.Items.itemFluoriteNugget = new Item(new Item.Properties().stacksTo(64).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_fluorite_nugget")),
 
-                Objects.Items.Armor.itemArmorRhodoniteHelmet = new RhodoniteHelmet(ArmorMaterials.RHODONITE, EquipmentSlot.HEAD, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_rhodonite_helmet")),
-                Objects.Items.Armor.itemArmorRhodoniteChest = new RhodoniteChestplate(ArmorMaterials.RHODONITE, EquipmentSlot.CHEST, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_rhodonite_chestplate")),
-                Objects.Items.Armor.itemArmorRhodoniteLeggins = new RhodoniteLeggings(ArmorMaterials.RHODONITE, EquipmentSlot.LEGS, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_rhodonite_leggings")),
-                Objects.Items.Armor.itemArmorRhodoniteBoots = new RhodoniteBoots(ArmorMaterials.RHODONITE, EquipmentSlot.FEET, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_rhodonite_boots")),
+                Objects.Items.Armor.itemArmorRhodoniteHelmet = new BaseArmorItem(ArmorMaterials.RHODONITE, EquipmentSlot.HEAD, new Item.Properties().stacksTo(1).tab(BaseClass.tab), (stack, level, tooltip, tooltipFlag) -> RhodoniteHelper.addRhodoniteHoverText(tooltip), (stack, level, player) -> RhodoniteHelper.doRhodoniteArmorTickLogic(player)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_rhodonite_helmet")),
+                Objects.Items.Armor.itemArmorRhodoniteChest = new BaseArmorItem(ArmorMaterials.RHODONITE, EquipmentSlot.CHEST, new Item.Properties().stacksTo(1).tab(BaseClass.tab), (stack, level, tooltip, tooltipFlag) -> RhodoniteHelper.addRhodoniteHoverText(tooltip), (stack, level, player) -> RhodoniteHelper.doRhodoniteArmorTickLogic(player)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_rhodonite_chestplate")),
+                Objects.Items.Armor.itemArmorRhodoniteLeggins = new BaseArmorItem(ArmorMaterials.RHODONITE, EquipmentSlot.LEGS, new Item.Properties().stacksTo(1).tab(BaseClass.tab), (stack, level, tooltip, tooltipFlag) -> RhodoniteHelper.addRhodoniteHoverText(tooltip), (stack, level, player) -> RhodoniteHelper.doRhodoniteArmorTickLogic(player)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_rhodonite_leggings")),
+                Objects.Items.Armor.itemArmorRhodoniteBoots = new BaseArmorItem(ArmorMaterials.RHODONITE, EquipmentSlot.FEET, new Item.Properties().stacksTo(1).tab(BaseClass.tab), (stack, level, tooltip, tooltipFlag) -> {
+                    RhodoniteHelper.addRhodoniteHoverText(tooltip);
+                    RhodoniteHelper.addEmptyLineHoverText(tooltip);
+                    RhodoniteHelper.addNoFallDamageHoverText(tooltip);}, (stack, level, player) -> {
+                    RhodoniteHelper.doRhodoniteArmorTickLogic(player);
+                    RhodoniteHelper.setFallDamageToZero(player);}).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_rhodonite_boots")),
 
-                Objects.Items.Armor.itemArmorFluoriteHelmet = new FluoriteHelmet(ArmorMaterials.FLUORITE, EquipmentSlot.HEAD, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_fluorite_helmet")),
-                Objects.Items.Armor.itemArmorFluoriteChest = new FluoriteChestplate(ArmorMaterials.FLUORITE, EquipmentSlot.CHEST, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_fluorite_chestplate")),
-                Objects.Items.Armor.itemArmorFluoriteLeggings = new FluoriteLeggings(ArmorMaterials.FLUORITE, EquipmentSlot.LEGS, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_fluorite_leggings")),
-                Objects.Items.Armor.itemArmorFluoriteBoots = new FluoriteBoots(ArmorMaterials.FLUORITE, EquipmentSlot.FEET, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_fluorite_boots")),
+                Objects.Items.Armor.itemArmorFluoriteHelmet = new ArmorItem(ArmorMaterials.FLUORITE, EquipmentSlot.HEAD, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_fluorite_helmet")),
+                Objects.Items.Armor.itemArmorFluoriteChest = new ArmorItem(ArmorMaterials.FLUORITE, EquipmentSlot.CHEST, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_fluorite_chestplate")),
+                Objects.Items.Armor.itemArmorFluoriteLeggings = new ArmorItem(ArmorMaterials.FLUORITE, EquipmentSlot.LEGS, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_fluorite_leggings")),
+                Objects.Items.Armor.itemArmorFluoriteBoots = new BaseArmorItem(ArmorMaterials.FLUORITE, EquipmentSlot.FEET, new Item.Properties().stacksTo(1).tab(BaseClass.tab), (stack, level, tooltip, tooltipFlag) -> RhodoniteHelper.addNoFallDamageHoverText(tooltip), (stack, level, player) -> RhodoniteHelper.setFallDamageToZero(player)).setRegistryName(new ResourceLocation(Ref.MODID, "item_armor_fluorite_boots")),
 
                 Objects.Items.Tools.itemToolRhodoniteSwordNoodle = new SwordItem(ToolMaterials.RHODONITE_NOODLE, 1, 1, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_rhodonite_sword_noodle")),
                 Objects.Items.Tools.itemToolRhodoniteSword = new SwordItem(ToolMaterials.RHODONITE, 9, 9, new Item.Properties().stacksTo(1).tab(BaseClass.tab)).setRegistryName(new ResourceLocation(Ref.MODID, "item_tool_rhodonite_sword")),
@@ -68,7 +70,7 @@ public class EventHandler {
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(
                 Objects.Blocks.blockRhodonite = new Block(Block.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(6F)).setRegistryName(new ResourceLocation(Ref.MODID, "block_rhodonite")),
-                Objects.Blocks.blockOreRhodonite = new RhodoniteOre(Block.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6F)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_rhodonite")),
+                Objects.Blocks.blockOreRhodonite = new BaseBlock(Block.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(6F), (stack, blockGetter, tooltip, tooltipFlag) -> RhodoniteHelper.addFoundInEndHoverText(tooltip)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_rhodonite")),
 
                 Objects.Blocks.blockFluorite = new Block(Block.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(4F)).setRegistryName(new ResourceLocation(Ref.MODID, "block_fluorite")),
                 Objects.Blocks.blockOreFluorite = new Block(Block.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(4F)).setRegistryName(new ResourceLocation(Ref.MODID, "block_ore_fluorite"))

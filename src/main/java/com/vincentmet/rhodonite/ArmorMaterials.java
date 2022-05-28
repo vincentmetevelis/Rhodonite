@@ -1,12 +1,13 @@
-package com.vincentmet.rhodonite.armor;
+package com.vincentmet.rhodonite;
 
-import com.vincentmet.rhodonite.*;
-import java.util.function.Supplier;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.*;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
+
+import java.util.function.Supplier;
 
 public enum ArmorMaterials implements ArmorMaterial{
     RHODONITE(new ResourceLocation(Ref.MODID, "material_armor_rhodonite"), 1000, new int[]{8, 14, 20, 8}, 30, SoundEvents.ARMOR_EQUIP_DIAMOND, 40F, ()->{return Ingredient.of(Objects.Items.itemRhodoniteIngot);}, 4),
