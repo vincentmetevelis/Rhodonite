@@ -1,14 +1,15 @@
-package com.vincentmet.rhodonite.lib;
+package com.vincentmet.rhodonite;
 
 import com.vincentmet.rhodonite.Objects;
-import java.util.function.Supplier;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
+import java.util.function.Supplier;
+
 public enum ToolMaterials implements IItemTier {
-    RHODONITE(6, 9876, 50, 12, 30, ()->{return Ingredient.fromItems(Objects.Items.itemRhodoniteIngot);}),
-    RHODONITE_NOODLE(1, 42, 3, 1, 5, ()->{return Ingredient.fromItems(Objects.Items.itemRhodoniteIngot);}),
-    FLUORITE(5, 1337, 15, 5, 30, ()->{return Ingredient.fromItems(Objects.Items.itemFluoriteCrystal);});
+    RHODONITE(6, 9876, 50, 12, 30, ()->{return Ingredient.of(Objects.Items.itemRhodoniteIngot);}),
+    RHODONITE_NOODLE(1, 42, 3, 1, 5, ()->{return Ingredient.of(Objects.Items.itemRhodoniteIngot);}),
+    FLUORITE(5, 1337, 15, 5, 30, ()->{return Ingredient.of(Objects.Items.itemFluoriteCrystal);});
 
     private final int harvestLevel;
     private final int maxUses;
@@ -27,32 +28,32 @@ public enum ToolMaterials implements IItemTier {
     }
 
     @Override
-    public int getMaxUses() {
+    public int getUses() {
         return this.maxUses;
     }
 
     @Override
-    public float getEfficiency() {
+    public float getSpeed() {
         return this.efficiency;
     }
 
     @Override
-    public float getAttackDamage() {
+    public float getAttackDamageBonus() {
         return this.attackDamage;
     }
 
     @Override
-    public int getHarvestLevel() {
+    public int getLevel() {
         return this.harvestLevel;
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return this.enchantability;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
+    public Ingredient getRepairIngredient() {
         return this.repairMaterial;
     }
 }
