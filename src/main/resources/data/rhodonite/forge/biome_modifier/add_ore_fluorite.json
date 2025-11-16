@@ -1,0 +1,7 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "rhodonite:ore_fluorite",
+  "step": "underground_ores"
+}
+

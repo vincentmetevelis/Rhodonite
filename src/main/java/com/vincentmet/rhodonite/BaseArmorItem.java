@@ -1,7 +1,6 @@
 package com.vincentmet.rhodonite;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -17,8 +16,8 @@ public class BaseArmorItem extends ArmorItem {
     private QuadConsumer<ItemStack, Level, List<Component>, TooltipFlag> hoverTextConsumer;
     private TriConsumer<ItemStack, Level, Player> armorTickConsumer;
 
-    public BaseArmorItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlotType, Properties properties, QuadConsumer<ItemStack, Level, List<Component>, TooltipFlag> hoverTextConsumer, TriConsumer<ItemStack, Level, Player> armorTickConsumer) {
-        super(armorMaterial, equipmentSlotType, properties);
+    public BaseArmorItem(ArmorMaterial armorMaterial, ArmorItem.Type type, Properties properties, QuadConsumer<ItemStack, Level, List<Component>, TooltipFlag> hoverTextConsumer, TriConsumer<ItemStack, Level, Player> armorTickConsumer) {
+        super(armorMaterial, type, properties);
         this.hoverTextConsumer = hoverTextConsumer;
         this.armorTickConsumer = armorTickConsumer;
     }

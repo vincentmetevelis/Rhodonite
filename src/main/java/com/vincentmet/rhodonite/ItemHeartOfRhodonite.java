@@ -24,11 +24,9 @@ public class ItemHeartOfRhodonite extends Item {
                 int k = (int) (player.zOld + (player.position().z - player.zOld) * var4);
 
                 if(Config.HEART_CRAFTING_BLOCKDAMAGE.get()){
-                    Explosion explosion = new Explosion(level, player, i, j, k, Config.HEART_CRAFTING_EXPLOSION_STRENGTH.get().floatValue(), false, Explosion.BlockInteraction.BREAK);
-                    explosion.explode();
-                    explosion.finalizeExplosion(false);
+                    level.explode(player, i, j, k, Config.HEART_CRAFTING_EXPLOSION_STRENGTH.get().floatValue(), Level.ExplosionInteraction.BLOCK);
                 }else{
-                    level.explode(null, i, j, k, Config.HEART_CRAFTING_EXPLOSION_STRENGTH.get().floatValue(), false, Explosion.BlockInteraction.NONE);
+                    level.explode(player, i, j, k, Config.HEART_CRAFTING_EXPLOSION_STRENGTH.get().floatValue(), Level.ExplosionInteraction.NONE);
                 }
             }
         }

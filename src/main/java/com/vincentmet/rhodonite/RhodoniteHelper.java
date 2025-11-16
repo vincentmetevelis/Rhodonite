@@ -2,8 +2,6 @@ package com.vincentmet.rhodonite;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 
@@ -11,16 +9,16 @@ import java.util.List;
 
 public class RhodoniteHelper {
     public static void addRhodoniteHoverText(List<Component> tooltip){
-        tooltip.add(new TranslatableComponent(ChatFormatting.BLUE + "Ability: Flight"));
-        tooltip.add(new TranslatableComponent(ChatFormatting.DARK_AQUA + "Use: Equip the full set"));
+        tooltip.add(Component.translatable(ChatFormatting.BLUE + "Ability: Flight"));
+        tooltip.add(Component.translatable(ChatFormatting.DARK_AQUA + "Use: Equip the full set"));
     }
 
     public static void addNoFallDamageHoverText(List<Component> tooltip){
-        tooltip.add(new TranslatableComponent(ChatFormatting.BLUE + "Ability: No fall damage"));
+        tooltip.add(Component.translatable(ChatFormatting.BLUE + "Ability: No fall damage"));
     }
 
     public static void addEmptyLineHoverText(List<Component> tooltip){
-        tooltip.add(new TextComponent(""));
+        tooltip.add(Component.literal(""));
     }
 
     public static void setFallDamageToZero(Player player){
@@ -44,6 +42,6 @@ public class RhodoniteHelper {
     }
 
     public static void addFoundInEndHoverText(List<Component> tooltip){
-        tooltip.add(new TranslatableComponent(ChatFormatting.BLUE + "Can be found in the end!"));
+        tooltip.add(Component.translatable(ChatFormatting.BLUE + "Can be found in the end!"));
     }
 }
