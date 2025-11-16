@@ -21,7 +21,7 @@ archivesBaseName = property('mod.id')
 java.toolchain.languageVersion = JavaLanguageVersion.of(property('java.version'))
 minecraft {
     mappings channel: 'official', version: property('mc.version')
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    
     runs {
         client {
             workingDirectory project.file('run')
@@ -63,8 +63,8 @@ dependencies {
     minecraft "net.minecraftforge:forge:${property('mc.version')}-${property('forge.version')}"
 
     // Temporarily commented out - JEI version may need updating
-    //compileOnly fg.deobf("mezz.jei:jei-${property('jei.mcversion')}:${property('jei.version')}:api")
-    //runtimeOnly fg.deobf("mezz.jei:jei-${property('jei.mcversion')}:${property('jei.version')}")
+    //compileOnly fg.deobf("mezz.jei:jei-${property('jei.mcversion')}-forge-api:${property('jei.version')}")
+    //runtimeOnly fg.deobf("mezz.jei:jei-${property('jei.mcversion')}-forge:${property('jei.version')}")
 
     implementation 'com.intellij:annotations:+@jar'
 }

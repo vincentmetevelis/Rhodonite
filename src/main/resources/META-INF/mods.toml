@@ -1,9 +1,9 @@
 modLoader="javafml" #mandatory
-loaderVersion="[47,)" #mandatory
+loaderVersion="[52,)" #mandatory
 license="All Rights Reserved"
 [[mods]] #mandatory
 modId="rhodonite" #mandatory
-version="1.20.1-1.0.0" #mandatory
+version="1.21.1-1.0.0" #mandatory
 displayName="Rhodonite" #mandatory
 description="Rhodonite!!!"
 authors="Vincentmet, TheBritishBrotherhood, MechWarrior99" #optional
@@ -11,13 +11,13 @@ authors="Vincentmet, TheBritishBrotherhood, MechWarrior99" #optional
 [[dependencies.rhodonite]]
     modId="forge"
     mandatory=true
-    versionRange="[47,)"
+    versionRange="[52,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.rhodonite]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.20.1,1.21)"
+    versionRange="[1.21.1,1.22)"
     ordering="NONE"
     side="BOTH"
