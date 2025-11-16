@@ -28,6 +28,7 @@ public class BaseArmorItem extends ArmorItem {
     }
 
     @Override
+    @SuppressWarnings("removal")
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         armorTickConsumer.accept(stack, world, player);
     }
