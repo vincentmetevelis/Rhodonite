@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "zwz"
+  ],
+  "key": {
+    "x": [
+      {
+        "item": "minecraft:ender_pearl"
+      }
+    ],
+    "y": [
+      {
+        "item": "minecraft:apple"
+      }
+    ],
+    "z": [
+      {
+        "item": "minecraft:lapis_lazuli"
+      }
+    ],
+    "w": [
+      {
+        "item": "rhodonite:block_rhodonite"
+      }
+    ]
+  },
+  "result": {
+    "id": "rhodonite:item_food_rhodonite_apple",
+    "count": 1
+  }
+}

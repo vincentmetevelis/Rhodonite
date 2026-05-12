@@ -4,3 +4,6 @@ build/
 run/
 out/
 *.iml
+serverrun/
+resourcesrun/
+src/generated/

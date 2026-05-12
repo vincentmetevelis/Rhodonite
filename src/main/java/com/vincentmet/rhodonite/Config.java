@@ -1,39 +1,31 @@
 package com.vincentmet.rhodonite;
 
-import com.electronwill.nightconfig.core.file.CommentedFileConfig;
-import com.electronwill.nightconfig.core.io.WritingMode;
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
-import java.nio.file.Path;
+public final class Config {
+    private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
-@Mod.EventBusSubscriber
-public class Config {
-    public static final ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
-    public static ForgeConfigSpec COMMON_CONFIG;
+    public static final ModConfigSpec.BooleanValue HEART_CRAFTING_EXPLOSION;
+    public static final ModConfigSpec.IntValue HEART_CRAFTING_EXPLOSION_CHANCE;
+    public static final ModConfigSpec.DoubleValue HEART_CRAFTING_EXPLOSION_STRENGTH;
+    public static final ModConfigSpec.BooleanValue HEART_CRAFTING_BLOCKDAMAGE;
+    public static final ModConfigSpec.BooleanValue RHODONITE_ARMOR_FLIGHT;
 
-    public static ForgeConfigSpec.BooleanValue HEART_CRAFTING_EXPLOSION;
-    public static ForgeConfigSpec.IntValue HEART_CRAFTING_EXPLOSION_CHANCE;
-    public static ForgeConfigSpec.DoubleValue HEART_CRAFTING_EXPLOSION_STRENGTH;
-    public static ForgeConfigSpec.BooleanValue HEART_CRAFTING_BLOCKDAMAGE;
-    public static ForgeConfigSpec.BooleanValue RHODONITE_ARMOR_FLIGHT;
+    static final ModConfigSpec SPEC;
 
-    static{
-        COMMON_BUILDER.push("heart");
-        HEART_CRAFTING_EXPLOSION = COMMON_BUILDER.comment("Rhodonite heart explosion").define("explosion", true);
-        HEART_CRAFTING_EXPLOSION_CHANCE = COMMON_BUILDER.comment("Rhodonite heart explosion chance").defineInRange("explosion_chance", 15, 0, 100);
-        HEART_CRAFTING_EXPLOSION_STRENGTH = COMMON_BUILDER.comment("Rhodonite heart explosion strength").defineInRange("explosion_strength", 5D, 0D, 100D);
-        HEART_CRAFTING_BLOCKDAMAGE = COMMON_BUILDER.comment("Rhodonite heart explosion block damage").define("explosion_blockdamage", true);
-        COMMON_BUILDER.pop();
-        COMMON_BUILDER.push("armor");
-        RHODONITE_ARMOR_FLIGHT = COMMON_BUILDER.comment("Rhodonite armor flight").define("flight", true);
-        COMMON_BUILDER.pop();
-        COMMON_CONFIG = COMMON_BUILDER.build();
+    static {
+        BUILDER.push("heart");
+        HEART_CRAFTING_EXPLOSION = BUILDER.comment("Rhodonite heart explosion").define("explosion", true);
+        HEART_CRAFTING_EXPLOSION_CHANCE = BUILDER.comment("Rhodonite heart explosion chance").defineInRange("explosion_chance", 15, 0, 100);
+        HEART_CRAFTING_EXPLOSION_STRENGTH = BUILDER.comment("Rhodonite heart explosion strength").defineInRange("explosion_strength", 5D, 0D, 100D);
+        HEART_CRAFTING_BLOCKDAMAGE = BUILDER.comment("Rhodonite heart explosion block damage").define("explosion_blockdamage", true);
+        BUILDER.pop();
+        BUILDER.push("armor");
+        RHODONITE_ARMOR_FLIGHT = BUILDER.comment("Rhodonite armor flight").define("flight", true);
+        BUILDER.pop();
+        SPEC = BUILDER.build();
     }
 
-    public static void loadConfig(ForgeConfigSpec spec, Path path){
-        final CommentedFileConfig config = CommentedFileConfig.builder(path).sync().autosave().writingMode(WritingMode.REPLACE).build();
-        config.load();
-        spec.setConfig(config);
+    private Config() {
     }
 }

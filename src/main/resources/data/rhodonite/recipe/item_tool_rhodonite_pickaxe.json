@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "zyz",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "x": [
+      {
+        "item": "minecraft:stick"
+      }
+    ],
+    "y": [
+      {
+        "item": "rhodonite:block_rhodonite"
+      }
+    ],
+    "z": [
+      {
+        "item": "rhodonite:item_rhodonite_ingot"
+      }
+    ]
+  },
+  "result": {
+    "id": "rhodonite:item_tool_rhodonite_pickaxe",
+    "count": 1
+  }
+}

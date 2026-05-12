@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "rhodonite:block_ore_fluorite"
-  },
-  "result": "rhodonite:item_fluorite_crystal",
-  "experience": 0.35,
-  "cookingTime": 200
-}

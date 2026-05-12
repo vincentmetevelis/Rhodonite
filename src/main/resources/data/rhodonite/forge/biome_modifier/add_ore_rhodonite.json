@@ -1,7 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#minecraft:is_end",
-  "features": "rhodonite:ore_rhodonite",
-  "step": "underground_ores"
-}
-

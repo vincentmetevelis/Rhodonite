@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "x x",
+    "y y"
+  ],
+  "key": {
+    "x": [
+      {
+        "item": "rhodonite:item_rhodonite_ingot"
+      }
+    ],
+    "y": [
+      {
+        "item": "rhodonite:block_rhodonite"
+      }
+    ]
+  },
+  "result": {
+    "id": "rhodonite:item_armor_rhodonite_boots",
+    "count": 1
+  }
+}

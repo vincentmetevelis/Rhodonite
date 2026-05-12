@@ -1,35 +1,31 @@
 package com.vincentmet.rhodonite;
 
+import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
 import java.util.List;
 
 public class BaseArmorItem extends ArmorItem {
-    private QuadConsumer<ItemStack, Level, List<Component>, TooltipFlag> hoverTextConsumer;
-    private TriConsumer<ItemStack, Level, Player> armorTickConsumer;
+    private final QuadConsumer<ItemStack, Level, List<Component>, TooltipFlag> hoverTextConsumer;
 
-    public BaseArmorItem(ArmorMaterial armorMaterial, ArmorItem.Type type, Properties properties, QuadConsumer<ItemStack, Level, List<Component>, TooltipFlag> hoverTextConsumer, TriConsumer<ItemStack, Level, Player> armorTickConsumer) {
-        super(armorMaterial, type, properties);
+    public BaseArmorItem(
+            Holder<ArmorMaterial> material,
+            Type type,
+            Properties properties,
+            QuadConsumer<ItemStack, Level, List<Component>, TooltipFlag> hoverTextConsumer) {
+        super(material, type, properties);
         this.hoverTextConsumer = hoverTextConsumer;
-        this.armorTickConsumer = armorTickConsumer;
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack stack, @Nullable Level world, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
-        hoverTextConsumer.accept(stack, world, tooltip, flag);
-    }
-
-    @Override
-    @SuppressWarnings("removal")
-    public void onArmorTick(ItemStack stack, Level world, Player player) {
-        armorTickConsumer.accept(stack, world, player);
+    public void appendHoverText(@NotNull ItemStack stack, @NotNull Item.TooltipContext context, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+        hoverTextConsumer.accept(stack, context.level(), tooltip, flag);
     }
 }
